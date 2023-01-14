@@ -49,7 +49,7 @@ export default function TodoApp() {
           onClick={handleSubmit}
           className="buttonCreate"
           type="submit"
-          value="Create todo"
+          value="Create to-do"
         />
       </form>
       <div className="todosContainer">
