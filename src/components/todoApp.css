@@ -1,5 +1,16 @@
+@media (min-width: 768px) {
+    .todoContainer {
+      
+        width: 500px;
+        margin: 100px auto;
+    
+        display: flex;
+        flex-direction: column;
+    
+    }
+  }
 .todoContainer{
-    width: 500px;
+    max-width: 70%;
     margin: 100px auto;
 
     display: flex;
