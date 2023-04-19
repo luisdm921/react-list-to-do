@@ -1,6 +1,12 @@
 import { useState } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 export default function Todo({ item, onUpdate, onDelete }) {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   const [isEdit, setIsEdit] = useState(false);
   function FormEdit() {
     function handleSubmit(e) {
@@ -50,5 +56,5 @@ export default function Todo({ item, onUpdate, onDelete }) {
     );
   }
 
-  return <div className="todo">{isEdit ? <FormEdit /> : <TodoElement />}</div>;
+  return <div className="todo" data-aos="zoom-in">{isEdit ? <FormEdit /> : <TodoElement />}</div>;
 }

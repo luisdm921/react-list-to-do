@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Todo from "./todo";
 import './todoApp.css'
+import note from "../img/Note.png"
 
 export default function TodoApp() {
   const [title, setTitle] = useState("");
@@ -30,12 +31,14 @@ export default function TodoApp() {
 
   function handleUpdate(id, value) {
     const temp = [...todos];
-    const item = temp.find((item) => (item.id === id));
+    const item = temp.find((i) => (i.id === id));
     item.title = value;
     setTodos(temp);
   }
 
   return (
+    <div className="main-container">
+    <div className="title"><h1>Organize your daily routine</h1></div>
     <div className="todoContainer">
       <form className="todoCreateForm" onSubmit={handleSubmit}>
         <input
@@ -44,9 +47,9 @@ export default function TodoApp() {
           }}
           className="todoInput"
           value={title}
+          placeholder="Write your task"
         />
         <input
-          onClick={handleSubmit}
           className="buttonCreate"
           type="submit"
           value="Create to-do"
@@ -57,6 +60,7 @@ export default function TodoApp() {
           <Todo key={item.id} item={item} onUpdate={handleUpdate} onDelete={handleDelete}></Todo>
         ))}
       </div>
+    </div>
     </div>
   );
 }
