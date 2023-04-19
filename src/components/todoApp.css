@@ -40,7 +40,7 @@
 
 .todoInput {
   flex-grow: 1;
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border-radius: 3px;
   border: solid 1px #999;
@@ -70,10 +70,12 @@
 .todoTitle {
   flex: 1;
   font-size: 20px;
+  text-align: center;
 }
 .todoUpdateForm,
 .todoInfo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 5px;
 }
@@ -97,4 +99,10 @@ h1 {
   color: rgb(255, 255, 255);
   font-size: 40px;
   text-align: center;
+}
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
 }
